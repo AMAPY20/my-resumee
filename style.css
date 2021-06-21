@@ -13,7 +13,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* overflow: hidden; */
     direction: rtl;
 }
 
@@ -22,7 +21,6 @@ ul{
 }
 
 body{
-    /* background-color: #e5f1ff; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -52,14 +50,12 @@ body{
     position: relative;
     display: flex;
     flex-direction: column;
-    /* align-items: center; */
     padding-bottom: 20px;
     
 }
 
 .image{
     width: 100%;
-    /* background-color: #fff; */
 }
 
 .image img{
@@ -72,7 +68,7 @@ body{
 .title .title-contact{
     display: flex;
     flex-direction: row;
-    margin-left: 48px;
+    /* margin-left: 48px; */
 
 }
 
@@ -155,6 +151,7 @@ body{
     padding: 40px 60px;
     display: flex;
     flex-direction: column;
+    overflow: hidden;
     
 }
 
@@ -165,14 +162,6 @@ body{
     
 }
 
-/* .profileText::after{
-    content: "";
-    border-right: 10px solid var(--primary-color) ;
-    border-radius: 15px;
-    position: absolute;
-    left: 20px;
-    width: 10px;
-} */
 .profileText h2{
     font-weight: 400;
     line-height: 1;
@@ -204,29 +193,6 @@ body{
     position: relative;
 }
 
-/* .experience ul::before{
-    content: "";
-    width: 2px;
-    height: 75%;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 50%;
-    margin-right: -1px;
-    background: #196dd1;
-}
-.experience ul li::before{
-    content: "";
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background-color: #196dd1;
-    position: absolute;
-    top: 9%;
-    right: 50%;
-    margin-right: -5px;
-} */
-
 .experience ul li {
     margin-bottom: 10px;
     color: var(--fiveth-color);
@@ -234,18 +200,12 @@ body{
 .experience .exp-line p{
     margin-bottom: 20px;
 }
-.skills .prog-holder{
+.title .prog-holder{
     margin-bottom: 20px;
     font-family: 'Poppins', sans-serif;
 }
-.skills h2{
-    color: var(--primary-color);
-    margin-bottom: 20px;
-    font-size: 28px;
-    margin-top: 25px;
-}
 
-.skills .prog-holder h4{
+.title .prog-holder h4{
     margin-bottom: 15px;
     font-weight: normal;
     text-transform: uppercase;
@@ -255,18 +215,18 @@ body{
     text-align: right;
     
 }
-.skills .prog-holder .prog{
+.title .prog-holder .prog{
     background-color: var(--second-color);
     height: 10px;
 }
-.skills .prog-holder .prog span{
+.title .prog-holder .prog span{
     display: block;
     background-color: var(--primary-color);
     height: 100%;
     position: relative;
     transition:step-start;
 }
-.skills .prog-holder .prog span::before{
+.title .prog-holder .prog span::before{
     content: attr(data-progress);
     position: absolute;
     top: -32px;
@@ -279,7 +239,7 @@ body{
     border-radius: 7px;
     font-size: 12px;
 }
-.skills .prog-holder .prog span::after{
+.title .prog-holder .prog span::after{
     content: "";
     position: absolute;
     border: solid;
@@ -340,6 +300,10 @@ body{
     color: var(--fiveth-color);
     line-height: 3;
 }
+
+.interests ul li i{
+    color: var(--primary-color);
+}
 .language h2{
     color: var(--primary-color);
     margin-top: 25px;
@@ -362,11 +326,6 @@ body{
         grid-template-columns: repeat(1,1fr);
     }
 
-
-    .container .right-side{
-        padding: 40px;
-    }
-
     .profileInfo {
         align-items: inherit;
     }
@@ -386,7 +345,7 @@ body{
 
     .title p{
         font-size: 17px;
-        margin-left: 0;
+        /* margin-left: 0; */
     }
 
     .title .contact {
@@ -431,21 +390,55 @@ body{
 }
 
 @media (max-width: 575px){
+    .container .left-side {
+        padding: 30px;
+    }
 
     .image{
         margin: 0;
         width: 100%;
     }
     .container .right-side {
-        padding: 14px 38px;
+        padding: 30px;
+    }
+    .title .head {
+        font-size: 20px;
+    }
+
+    .title p {
+        font-size: 15px;
+    }
+
+    .title .contact {
+        font-size: 30px;
     }
 
     .profileText h2{
-        font-size: 50px;
+        font-size: 45px;
+    }
+
+    .profileText h3 {
+        font-size: 2rem;
+    }
+    .title .prog-holder h4 {
+        font-size: 17px;
+    }
+    .title h2{
+        font-size: 26px;
+    }
+
+    .interests ul {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    }
+
+    .title .interests p{
+        font-size: 16px;
     }
 
     .download-social{
-        flex-direction: column-reverse;
+        flex-direction: column;
     }
 
     .download-social .cv {
